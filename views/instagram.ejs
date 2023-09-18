@@ -1,19 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>You are On insta</title>
-    <style>
-        img {
-            height: 200px;
-            width: 200px;
-        }
-    </style>
-</head>
 
+<%- include('header'); -%>
 <body>
+   
     <h2>This is belong to <%= instadata.name %>
     </h2>
     <p>Followers:<%= instadata.followers %> and Following <%= instadata.following %>
@@ -25,7 +16,7 @@
             <img src="<%= post.image %>" alt="">
             <br />
             Likes: <%= post.likes %>
-            Comments:  <%= post.comments %>
+            Comments:<%= post.comments %>
             <% } %>
     </p>
 
