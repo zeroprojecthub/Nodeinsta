@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You are On insta</title>
+    <style>
+        img {
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>This is belong to <%= instadata.name %>
+    </h2>
+    <p>Followers:<%= instadata.followers %> and Following <%= instadata.following %>
+    </p>
+
+    <p>
+        <% for( let post of instadata.posts ) { %>
+            <br />
+            <img src="<%= post.image %>" alt="">
+            <br />
+            Likes: <%= post.likes %>
+            Comments:  <%= post.comments %>
+            <% } %>
+    </p>
+
+</body>
+
+</html>
